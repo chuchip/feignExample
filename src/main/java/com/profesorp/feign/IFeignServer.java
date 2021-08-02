@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface IFeignServer {
 
     @GetMapping("server/{httpCode}")
-    public ResponseEntity<OutputDto> callServer(@PathVariable("httpCode") int httpCode);
+    ResponseEntity<OutputDto> callServer(@PathVariable("httpCode") int httpCode);
 
 }

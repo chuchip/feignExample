@@ -5,6 +5,9 @@ public class OutputDto {
     int statusCode;
     String name;
 
+    public OutputDto()
+    {
+    }
     public OutputDto(int statusCode, String name) {
         this.statusCode = statusCode;
         this.name = name;
