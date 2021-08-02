@@ -22,6 +22,15 @@ public class ClientController {
         System.out.println("En client. Despues de llamada a server");
         return respuesta;
     }
+    @GetMapping("1/{code}")
+    ResponseEntity<OutputDto> callUsingFeignPlusOne(@PathVariable int code)
+    {
+        System.out.println("En client. Antes de llamada a server Devolvere: "+code);
+        ResponseEntity<OutputDto> respuesta=iFeignServer.callServerMas1(code);
+        System.out.println("En client. Despues de llamada a server");
+        return respuesta;
+    }
+
     @GetMapping("/template/{code}")
     ResponseEntity<OutputDto> callUsingRestTemplate(@PathVariable int code)
     {
